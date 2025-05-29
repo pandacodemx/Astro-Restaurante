@@ -1,0 +1,83 @@
+---
+const links = [
+  { name: "Inicio", href: "#hero" },
+  { name: "Menú", href: "#menu" },
+  { name: "Galería", href: "#gallery" },
+  { name: "Nosotros", href: "#about" },
+];
+---
+
+<header
+  class="w-full fixed top-0 left-0 z-50 bg-bg/80 backdrop-blur-md border-b border-secondary/30"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+  >
+    <!-- Logo -->
+    <a href="/" class="text-primary font-bold text-xl tracking-widest"
+      >MiRestaurante</a
+    >
+
+    <!-- Navegación desktop -->
+    <nav class="hidden md:flex space-x-6">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="text-text hover:text-primary transition-colors duration-300"
+          >
+            {link.name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- Botón reservar -->
+    <a
+      href="#reservar"
+      class="hidden md:inline-block bg-primary text-bg px-4 py-2 rounded-full hover:bg-accent transition-all"
+    >
+      Reservar
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button id="menu-toggle" class="md:hidden text-primary focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menú móvil (puedes controlar su apertura con AlpineJS, React o simple JS) -->
+  <nav
+    id="mobile-menu"
+    class="md:hidden hidden flex-col px-6 pb-4 space-y-4 bg-bg border-t border-secondary/30"
+  >
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class="block text-text hover:text-primary transition-colors duration-300"
+        >
+          {link.name}
+        </a>
+      ))
+    }
+    <a
+      href="#reservar"
+      class="block bg-primary text-bg text-center px-4 py-2 rounded-full hover:bg-accent transition-all"
+    >
+      Reservar
+    </a>
+  </nav>
+</header>

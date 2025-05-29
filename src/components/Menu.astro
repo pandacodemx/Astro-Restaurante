@@ -1,0 +1,70 @@
+---
+const menu = [
+  {
+    categoria: "Entradas",
+    items: [
+      {
+        nombre: "Bruschetta",
+        descripcion: "Pan tostado con tomate, ajo y albahaca fresca.",
+        precio: "$95",
+        imagen: "/images/bruschetta.jpg",
+      },
+      {
+        nombre: "Empanadas artesanales",
+        descripcion: "Rellenas de carne y especias tradicionales.",
+        precio: "$120",
+        imagen: "/images/empanadas.jpg",
+      },
+    ],
+  },
+  {
+    categoria: "Platos Fuertes",
+    items: [
+      {
+        nombre: "Ribeye a la parrilla",
+        descripcion: "Corte premium acompañado de papas rústicas.",
+        precio: "$340",
+        imagen: "/images/ribeye.jpg",
+      },
+      {
+        nombre: "Fettuccine Alfredo",
+        descripcion: "Pasta cremosa con parmesano y pollo.",
+        precio: "$260",
+        imagen: "/images/fettuccine.jpg",
+      },
+    ],
+  },
+];
+---
+
+<section id="menu" class="px-6 py-20 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-extrabold mb-12 text-primary text-center">
+    Nuestro Menú
+  </h2>
+
+  {
+    menu.map(({ categoria, items }) => (
+      <div class="mb-16">
+        <h3 class="text-3xl font-semibold mb-8 border-b border-primary pb-2">
+          {categoria}
+        </h3>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map(({ nombre, descripcion, precio, imagen }) => (
+            <article class="flex flex-col rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+              <img
+                src={imagen}
+                alt={nombre}
+                class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="p-6 bg-white flex flex-col flex-grow">
+                <h4 class="text-xl font-semibold mb-2 text-text">{nombre}</h4>
+                <p class="text-text/70 flex-grow">{descripcion}</p>
+                <div class="mt-4 text-primary font-bold text-lg">{precio}</div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</section>

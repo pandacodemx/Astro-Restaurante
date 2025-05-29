@@ -1,0 +1,21 @@
+@import "./theme.css";
+@import "tailwindcss";
+
+/* Aplicar las variables a Tailwind */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-text {
+  color: var(--color-text);
+}
+.text-text\/70 {
+  color: var(--color-text-muted);
+}
+.bg-white {
+  background-color: var(--color-bg-card);
+}

@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #fffaf5;
+  --color-text: #1e1e1e;
+  --color-primary: #7c3aed;
+  --color-secondary: #fbbf24;
+  --color-accent: #ec4899;
+  --font-base: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+}
