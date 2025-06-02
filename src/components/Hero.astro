@@ -6,40 +6,107 @@
   id="hero"
   class="relative h-screen flex items-center justify-center text-center overflow-hidden"
 >
-  <!-- Video de fondo -->
   <video
-    
-    class="absolute inset-0 w-full h-full object-cover"
+    class="absolute inset-0 w-full h-full object-cover brightness-75"
     autoplay
     muted
     loop
     playsinline
+    poster="/images/hero-poster.jpg"
   >
     <source src="/videos/fondo.mp4" type="video/mp4" />
+    <source src="/videos/fondo.webm" type="video/webm" />
     Tu navegador no soporta el video.
   </video>
-
-  <!-- Capa oscura -->
-  <div class="absolute inset-0 bg-neutral-800/50 z-0"></div>
-
-  <!-- Contenido -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/50 to-transparent z-0"
+  >
+  </div>
   <div
     data-sal="zoom-out"
-    data-sal-duration="800"
-    data-sal-delay="200"
-    class="relative z-10 px-4"
+    data-sal-duration="1000"
+    data-sal-delay="300"
+    data-sal-easing="ease-out-bounce"
+    class="relative z-10 px-6 flex items-center flex-col"
   >
-    <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
-      Bienvenido a <span class="text-red-700 drop-shadow-lg">La Terraza</span>
-    </h1>
-    <p class="mt-4 text-lg md:text-xl text-white/90 max-w-xl mx-auto drop-shadow-lg">
-      Restaurant & Drinks - Disfruta de una experiencia culinaria única con sabores que deleitan.
-    </p>
-    <a
-      href="/menu"
-      class="mt-6 inline-block bg-red-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-accent transition-all"
+    <!-- Logo con efectos -->
+    <div
+      class="mb-8 p-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
+      data-sal="zoom-in"
+      data-sal-delay="500"
     >
-      Ver Menú
-    </a>
+      <img
+        class="size-56 md:size-72 transition-transform hover:scale-105 duration-500"
+        src="https://cdn.fastpixel.io/fp/ret_img+v_6da+w_800+h_848+q_glossy+to_webp/www.sosfactory.com/wp-content/uploads/2016/12/restaurant-logo-mr-bolat.png"
+        alt="Logo Mr. Bolat"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Texto principal con animación -->
+    <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
+      <span class="inline-block" data-sal="slide-up" data-sal-delay="400"
+        >Bienvenido a
+      </span>
+      <span
+        class="text-red-500 inline-block"
+        data-sal="slide-up"
+        data-sal-delay="450"
+      >
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-700 drop-shadow-3xl"
+        >
+          Mr. Bolat
+        </span>
+      </span>
+    </h1>
+
+    <p
+      class="mt-6 text-xl md:text-2xl text-white max-w-2xl mx-auto leading-relaxed"
+      data-sal="fade"
+      data-sal-delay="600"
+    >
+      <span class="bg-black/30 px-2 py-1 rounded-lg backdrop-blur-sm">
+        Restaurant & Drinks - Una experiencia culinaria que deleita tus sentidos
+      </span>
+    </p>
+
+    <!-- Botones con animación -->
+    <div class="mt-10 flex gap-4" data-sal="fade-up" data-sal-delay="700">
+      <a
+        href="/menu"
+        class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-900/30 hover:shadow-red-900/50"
+      >
+        Ver Menú Completo
+      </a>
+      <a
+        href="#reservas"
+        class="inline-block bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+      >
+        Reservar Mesa
+      </a>
+    </div>
+
+    <!-- Flecha indicadora -->
+    <div
+      class="absolute bottom-15 left-1/2 transform -translate-x-1/2 animate-bounce"
+      data-sal="fade"
+      data-sal-delay="1000"
+    >
+      <svg
+        class="w-10 h-10 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linecap="round"
+          stroke-width="2"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
   </div>
+
+  <div class="absolute inset-0 z-0 pointer-events-none" id="particles-js"></div>
 </section>

@@ -13,7 +13,7 @@
   {
     "nombre": "Mojito Cubano",
     "categoria": "cocktails",
-    "imagen": "https://cdn.pixabay.com/photo/2017/05/23/22/36/mojito-2336421_1280.jpg",
+    "imagen": "https://imag.bonviveur.com/mojito-cubano.jpg",
     "ingredientes": "Ron blanco, menta, azúcar, soda, limón",
     "guarnicion": "Hojas de menta, rodaja de limón",
     "presentaciones": [
@@ -24,7 +24,7 @@
   {
     "nombre": "Piña Colada",
     "categoria": "cocktails",
-    "imagen": "https://cdn.pixabay.com/photo/2016/11/23/15/47/pina-colada-1850314_1280.jpg",
+    "imagen": "https://static01.nyt.com/images/2024/09/13/multimedia/RP-Coconut-Pina-Colada-pjkq/RP-Coconut-Pina-Colada-pjkq-threeByTwoMediumAt2X.jpg",
     "ingredientes": "Ron, crema de coco, jugo de piña",
     "guarnicion": "Rodaja de piña, cereza",
     "presentaciones": [
@@ -57,7 +57,7 @@
   {
     "nombre": "Hamburguesa Veggie",
     "categoria": "hamburguesas",
-    "imagen": "https://cdn.pixabay.com/photo/2018/06/18/16/05/burger-3489952_1280.jpg",
+    "imagen": "https://img2.rtve.es/n/2119800",
     "ingredientes": "Hamburguesa vegetal, lechuga, tomate, aguacate, cebolla morada",
     "guarnicion": "Camote frito",
     "presentaciones": [
@@ -68,7 +68,7 @@
   {
     "nombre": "Cheeseburger Doble",
     "categoria": "hamburguesas",
-    "imagen": "https://cdn.pixabay.com/photo/2017/01/18/15/02/hamburger-1991446_1280.jpg",
+    "imagen": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202201_3426-005_DoubleQuarterPounderwithCheese_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
     "ingredientes": "Doble carne, doble queso, pepinillos, kétchup, mostaza",
     "guarnicion": "Papas gajo",
     "presentaciones": [
@@ -79,7 +79,7 @@
   {
     "nombre": "Daiquiri de Fresa",
     "categoria": "cocktails",
-    "imagen": "https://cdn.pixabay.com/photo/2017/09/05/22/35/drink-2712453_1280.jpg",
+    "imagen": "https://cdn0.uncomo.com/es/posts/0/6/5/como_hacer_un_daiquiri_de_fresa_23560_orig.jpg",
     "ingredientes": "Ron blanco, puré de fresa, jugo de limón",
     "guarnicion": "Fresa fresca",
     "presentaciones": [

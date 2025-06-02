@@ -22,3 +22,15 @@ body {
 [x-cloak] {
   display: none !important;
 }
+.text-stroke {
+  -webkit-text-stroke: 1px rgb(17, 17, 17);
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}

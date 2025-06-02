@@ -15,6 +15,12 @@ const menu = [
         precio: "$120",
         imagen: "/images/2.jpg",
       },
+       {
+        nombre: "Ensalada Griega de Sandía",
+        descripcion: "Sandia con penino, cebolla, aceitunas , mentas y tomate bañada en diferentes aderezos.",
+        precio: "$80",
+        imagen: "/images/6.jpg",
+      },
     ],
   },
   {
@@ -43,46 +49,62 @@ const menu = [
 ];
 ---
 
-<section id="menu" class="px-6 py-20 max-w-7xl mx-auto">
-  <div class="flex justify-between items-center flex-col lg:flex-row">
-  <h2 class="text-4xl font-extrabold mb-4 text-red-700 text-center">
-    Nuestro mejores platos🔥
-  </h2>
-  <a
-    href="/menu"
-    class="mb-4 inline-block bg-red-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-accent transition-all"
-  >
-    Ver Menú Completo
-  </a></div>
+<section id="menu" class="px-6 py-20 max-w-7xl mx-auto bg-white/5 backdrop-blur-sm rounded-3xl my-12 border border-white/10">
+  <!-- Encabezado con estilo similar al Hero -->
+  <div class="flex flex-col items-center text-center mb-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-3">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-red-700 drop-shadow-lg">
+        Nuestros Platos Destacados
+      </span>
+    </h2>
+    <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+      Descubre las exquisiteces que han conquistado a nuestros comensales
+    </p>
+    <a
+      href="/menu"
+      class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-900/30 hover:shadow-red-900/50"
+    >
+      Ver Menú Completo
+    </a>
+  </div>
 
-  {
-    menu.map(({ categoria, items }) => (
-      <div class="mb-16">
-        <h3 class="text-3xl font-semibold mb-8 border-b border-primary pb-2 text-red-700">
-          {categoria}
-        </h3>
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map(({ nombre, descripcion, precio, imagen }) => (
-            <article
-              data-sal="zoom-out"
-              data-sal-duration="800"
-              data-sal-delay="200"
-              class="flex flex-col rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
-            >
+  <!-- Secciones de menú -->
+  {menu.map(({ categoria, items }) => (
+    <div class="mb-20" data-sal="slide-up">
+      <h3 class="text-3xl font-bold mb-10 pb-3 border-b border-red-700/30 text-white flex items-center gap-3">
+        <span class="bg-red-700/20 px-4 py-1 rounded-full">{categoria}</span>
+      </h3>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map(({ nombre, descripcion, precio, imagen }) => (
+          <article
+            data-sal="zoom-out"
+            class="relative group overflow-hidden rounded-2xl bg-gray-900/50 border border-white/10 hover:border-red-700/50 transition-all duration-500 hover:shadow-xl hover:shadow-red-900/10"
+          >
+            <!-- Imagen con efecto -->
+            <div class="overflow-hidden h-64">
               <img
                 src={imagen}
                 alt={nombre}
-                class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
               />
-              <div class="p-6 bg-white flex flex-col flex-grow">
-                <h4 class="text-xl font-semibold mb-2 text-text">{nombre}</h4>
-                <p class="text-text/70 flex-grow">{descripcion}</p>
-                <div class="mt-4 text-red-700 font-bold text-lg">{precio}</div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            </div>
+            
+            <!-- Contenido -->
+            <div class="p-6 relative z-10">
+              <div class="flex justify-between items-start mb-3">
+                <h4 class="text-xl font-bold text-white">{nombre}</h4>
+                <span class="bg-red-700 text-white px-3 py-1 rounded-full text-sm font-bold whitespace-nowrap">
+                  {precio}
+                </span>
               </div>
-            </article>
-          ))}
-        </div>
+              <p class="text-white/80 mb-4">{descripcion}</p>              
+              
+            </div>
+          </article>
+        ))}
       </div>
-    ))
-  }
+    </div>
+  ))}
 </section>
