@@ -9,11 +9,12 @@ module.exports = {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
         accent: "var(--color-accent)",
+        white: "var(--color-white)",
       },
       fontFamily: {
         base: "var(--font-base)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };

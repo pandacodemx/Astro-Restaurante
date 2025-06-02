@@ -9,15 +9,19 @@ const images = [
 ];
 ---
 
-<section id="gallery" class="px-15 py-20 bg-[var(--color-bg)]">
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold text-primary">Galería</h2>
-    <p class="mt-2 text-lg text-text/70">
+<section id="gallery" class="px-15 py-20 bg-red-500" >
+  <div class="text-center mb-12 " data-sal="zoom-out"
+    data-sal-duration="800"
+    data-sal-delay="200">
+    <h2 class="text-4xl md:text-6xl font-bold text-white">Galería</h2>
+    <p class="mt-2 text-lg text-white/70">
       Un vistazo a nuestros sabores y ambiente
     </p>
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-sal="zoom-out"
+    data-sal-duration="800"
+    data-sal-delay="200">
     {
       images.map((src) => (
         <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">

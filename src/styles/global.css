@@ -19,3 +19,6 @@ body {
 .bg-white {
   background-color: var(--color-bg-card);
 }
+[x-cloak] {
+  display: none !important;
+}

@@ -7,13 +7,13 @@ const menu = [
         nombre: "Bruschetta",
         descripcion: "Pan tostado con tomate, ajo y albahaca fresca.",
         precio: "$95",
-        imagen: "/images/bruschetta.jpg",
+        imagen: "/images/1.jpg",
       },
       {
         nombre: "Empanadas artesanales",
         descripcion: "Rellenas de carne y especias tradicionales.",
         precio: "$120",
-        imagen: "/images/empanadas.jpg",
+        imagen: "/images/2.jpg",
       },
     ],
   },
@@ -24,13 +24,19 @@ const menu = [
         nombre: "Ribeye a la parrilla",
         descripcion: "Corte premium acompañado de papas rústicas.",
         precio: "$340",
-        imagen: "/images/ribeye.jpg",
+        imagen: "/images/3.jpg",
       },
       {
         nombre: "Fettuccine Alfredo",
         descripcion: "Pasta cremosa con parmesano y pollo.",
         precio: "$260",
-        imagen: "/images/fettuccine.jpg",
+        imagen: "/images/4.jpg",
+      },
+      {
+        nombre: "Pollo a la Naranja",
+        descripcion: "Pollo bañado en salsa cremosa a la naranja.",
+        precio: "$160",
+        imagen: "/images/5.jpg",
       },
     ],
   },
@@ -38,19 +44,31 @@ const menu = [
 ---
 
 <section id="menu" class="px-6 py-20 max-w-7xl mx-auto">
-  <h2 class="text-4xl font-extrabold mb-12 text-primary text-center">
-    Nuestro Menú
+  <div class="flex justify-between items-center flex-col lg:flex-row">
+  <h2 class="text-4xl font-extrabold mb-4 text-red-700 text-center">
+    Nuestro mejores platos🔥
   </h2>
+  <a
+    href="/menu"
+    class="mb-4 inline-block bg-red-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-accent transition-all"
+  >
+    Ver Menú Completo
+  </a></div>
 
   {
     menu.map(({ categoria, items }) => (
       <div class="mb-16">
-        <h3 class="text-3xl font-semibold mb-8 border-b border-primary pb-2">
+        <h3 class="text-3xl font-semibold mb-8 border-b border-primary pb-2 text-red-700">
           {categoria}
         </h3>
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {items.map(({ nombre, descripcion, precio, imagen }) => (
-            <article class="flex flex-col rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+            <article
+              data-sal="zoom-out"
+              data-sal-duration="800"
+              data-sal-delay="200"
+              class="flex flex-col rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
+            >
               <img
                 src={imagen}
                 alt={nombre}
@@ -59,7 +77,7 @@ const menu = [
               <div class="p-6 bg-white flex flex-col flex-grow">
                 <h4 class="text-xl font-semibold mb-2 text-text">{nombre}</h4>
                 <p class="text-text/70 flex-grow">{descripcion}</p>
-                <div class="mt-4 text-primary font-bold text-lg">{precio}</div>
+                <div class="mt-4 text-red-700 font-bold text-lg">{precio}</div>
               </div>
             </article>
           ))}

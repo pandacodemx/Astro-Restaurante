@@ -1,0 +1,90 @@
+[
+  {
+    "nombre": "Margarita Clásica",
+    "categoria": "cocktails",
+    "imagen": "https://www.absolutdrinks.com/wp-content/uploads/recipe_margarita_1x1_27054dff46d6e7418e0a608f5beae5a4.jpg",
+    "ingredientes": "Tequila, Triple Seco, Jugo de Limón",
+    "guarnicion": "Escarchado de sal, rodaja de limón",
+    "presentaciones": [
+      { "tipo": "Copa", "precio": "$6.50" },
+      { "tipo": "Litro", "precio": "$22.50" }
+    ]
+  },
+  {
+    "nombre": "Mojito Cubano",
+    "categoria": "cocktails",
+    "imagen": "https://cdn.pixabay.com/photo/2017/05/23/22/36/mojito-2336421_1280.jpg",
+    "ingredientes": "Ron blanco, menta, azúcar, soda, limón",
+    "guarnicion": "Hojas de menta, rodaja de limón",
+    "presentaciones": [
+      { "tipo": "Vaso", "precio": "$5.50" },
+      { "tipo": "Jarra", "precio": "$18.00" }
+    ]
+  },
+  {
+    "nombre": "Piña Colada",
+    "categoria": "cocktails",
+    "imagen": "https://cdn.pixabay.com/photo/2016/11/23/15/47/pina-colada-1850314_1280.jpg",
+    "ingredientes": "Ron, crema de coco, jugo de piña",
+    "guarnicion": "Rodaja de piña, cereza",
+    "presentaciones": [
+      { "tipo": "Copa", "precio": "$7.00" },
+      { "tipo": "Vaso alto", "precio": "$9.50" }
+    ]
+  },
+  {
+    "nombre": "Hamburguesa Clásica",
+    "categoria": "hamburguesas",
+    "imagen": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg",
+    "ingredientes": "Carne de res, queso, lechuga, tomate, cebolla",
+    "guarnicion": "Papas fritas",
+    "presentaciones": [
+      { "tipo": "Individual", "precio": "$6.00" },
+      { "tipo": "Combo", "precio": "$8.50" }
+    ]
+  },
+  {
+    "nombre": "Hamburguesa BBQ",
+    "categoria": "hamburguesas",
+    "imagen": "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg",
+    "ingredientes": "Carne de res, queso cheddar, tocino, cebolla caramelizada, salsa BBQ",
+    "guarnicion": "Papas fritas",
+    "presentaciones": [
+      { "tipo": "Individual", "precio": "$8.00" },
+      { "tipo": "Combo", "precio": "$11.50" }
+    ]
+  },
+  {
+    "nombre": "Hamburguesa Veggie",
+    "categoria": "hamburguesas",
+    "imagen": "https://cdn.pixabay.com/photo/2018/06/18/16/05/burger-3489952_1280.jpg",
+    "ingredientes": "Hamburguesa vegetal, lechuga, tomate, aguacate, cebolla morada",
+    "guarnicion": "Camote frito",
+    "presentaciones": [
+      { "tipo": "Individual", "precio": "$7.00" },
+      { "tipo": "Combo", "precio": "$10.00" }
+    ]
+  },
+  {
+    "nombre": "Cheeseburger Doble",
+    "categoria": "hamburguesas",
+    "imagen": "https://cdn.pixabay.com/photo/2017/01/18/15/02/hamburger-1991446_1280.jpg",
+    "ingredientes": "Doble carne, doble queso, pepinillos, kétchup, mostaza",
+    "guarnicion": "Papas gajo",
+    "presentaciones": [
+      { "tipo": "Individual", "precio": "$9.00" },
+      { "tipo": "Combo", "precio": "$12.50" }
+    ]
+  },
+  {
+    "nombre": "Daiquiri de Fresa",
+    "categoria": "cocktails",
+    "imagen": "https://cdn.pixabay.com/photo/2017/09/05/22/35/drink-2712453_1280.jpg",
+    "ingredientes": "Ron blanco, puré de fresa, jugo de limón",
+    "guarnicion": "Fresa fresca",
+    "presentaciones": [
+      { "tipo": "Copa", "precio": "$6.00" },
+      { "tipo": "Frozen", "precio": "$7.50" }
+    ]
+  }
+]
