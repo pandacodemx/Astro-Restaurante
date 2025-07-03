@@ -12,7 +12,8 @@ module.exports = {
         white: "var(--color-white)",
       },
       fontFamily: {
-        base: "var(--font-base)",
+        base: ["var(--font-base)"],
+        titulo: ["var(--font-titulo)"],
       },
     },
   },

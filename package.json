@@ -14,6 +14,9 @@
     "astro": "^5.8.1",
     "sal.js": "^0.8.5",
     "tailwind-scrollbar": "^4.0.2",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "tsparticles": "^3.8.1",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-slim": "^2.12.0"
   }
 }

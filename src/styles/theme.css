@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --color-bg: #fffaf5;
   --color-text: #1e1e1e;
-  --color-white: #FFF;
+  --color-white: #fff;
   --color-primary: #3aed76;
   --color-secondary: #fbbf24;
   --color-accent: #ec4899;
   --font-base: "Poppins", sans-serif;
+  --font-titulo: "Roboto", sans-serif;
 }
 
 html {

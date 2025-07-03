@@ -49,11 +49,15 @@ const menu = [
 ];
 ---
 
-<section id="menu" class="px-6 py-20 max-w-7xl mx-auto bg-white/5 backdrop-blur-sm rounded-3xl my-12 border border-white/10">
-  <!-- Encabezado con estilo similar al Hero -->
+
+<section id="menu" class="px-6 bg-gradient-to-b from-black/90 to-gray-900 relative overflow-hidden">
+
+  <div class="absolute inset-0 z-0 opacity-5 bg-[url('https://img.freepik.com/vector-premium/patron-comida-deliciosa-fondo-pantalla-ilustracion-comida-sabrosa_332190-1724.jpg')]"></div>
+<section  class="px-6 py-20 max-w-7xl mx-auto bg-white/5 backdrop-blur-sm rounded-3xl my-12 border border-white/10">
+ 
   <div class="flex flex-col items-center text-center mb-6">
     <h2 class="text-4xl md:text-5xl font-extrabold mb-3">
-      <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-red-700 drop-shadow-lg">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r  from-white to-yellow-200 drop-shadow-lg">
         Nuestros Platos Destacados
       </span>
     </h2>
@@ -62,7 +66,7 @@ const menu = [
     </p>
     <a
       href="/menu"
-      class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-900/30 hover:shadow-red-900/50"
+      class="inline-block bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-900/30 hover:shadow-red-900/50"
     >
       Ver Menú Completo
     </a>
@@ -88,6 +92,8 @@ const menu = [
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
+              <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition duration-700"></span>
+
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
             </div>
             

@@ -115,14 +115,10 @@ import "sal.js/dist/sal.css";
       closeMenu.addEventListener("click", closeSidebar);
       overlay.addEventListener("click", closeSidebar);
     </script>
-    <script>
-      import sal from "sal.js";
-      sal({
-        threshold: 0.2,
-        once: true,
-        rootMargin: "0px 0px -100px 0px",
-      });
-    </script>
   </body>
   <script src="./src/scripts/menu.js" is:client></script>
+  <script>
+    import sal from "sal.js";
+    sal({ threshold: 0.2, once: true, rootMargin: "0px 0px -100px 0px" });
+  </script>
 </html>
