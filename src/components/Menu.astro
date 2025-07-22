@@ -55,13 +55,10 @@ const menu = [
   <div class="absolute inset-0 z-0 opacity-5 bg-[url('https://img.freepik.com/vector-premium/patron-comida-deliciosa-fondo-pantalla-ilustracion-comida-sabrosa_332190-1724.jpg')]"></div>
 <section  class="px-6 py-20 max-w-7xl mx-auto bg-white/5 backdrop-blur-sm rounded-3xl my-12 border border-white/10">
  
-  <div class="flex flex-col items-center text-center mb-6">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-3">
-      <span class="bg-clip-text text-transparent bg-gradient-to-r  from-white to-yellow-200 drop-shadow-lg">
-        Nuestros Platos Destacados
-      </span>
-    </h2>
-    <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+  <div class="flex flex-col items-center text-center mb-6">    
+    <img data-sal="slide-up"
+        data-sal-delay="400" src="https://cdn.builder.io/api/v1/image/assets%2F4967176e01a141828a5fad701f6faa79%2F4bba6c8554bd4acca47a268b72136907?width=400" alt="">   
+    <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 mt-8 ">
       Descubre las exquisiteces que han conquistado a nuestros comensales
     </p>
     <a
@@ -74,7 +71,7 @@ const menu = [
 
   <!-- Secciones de menú -->
   {menu.map(({ categoria, items }) => (
-    <div class="mb-20" data-sal="slide-up">
+    <div class="mb-20" data-sal="slide-up" data-sal-delay="500">
       <h3 class="text-3xl font-bold mb-10 pb-3 border-b border-red-700/30 text-white flex items-center gap-3">
         <span class="bg-red-700/20 px-4 py-1 rounded-full">{categoria}</span>
       </h3>
