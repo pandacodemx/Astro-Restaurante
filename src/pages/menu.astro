@@ -2,7 +2,11 @@
 // src/pages/menu.astro
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import menu from "../data/menu.json";
+
+const res = await fetch(
+  "http://localhost/sistema-restaurante/api/obtener_menu.php"
+);
+const menu = await res.json();
 ---
 
 <BaseLayout title="Menú QR">
@@ -10,27 +14,16 @@ import menu from "../data/menu.json";
     class="relative text-white min-h-screen px-4 py-8 md:px-6 md:py-10"
     x-data="{ category: 'all' }"
   >
-    <!-- Fondo mejorado -->
     <div class="absolute inset-0 bg-black/90 z-0"></div>
     <div
       class="absolute inset-0 bg-center z-[-1] opacity-20"
-      style="background-image: url('https://img.freepik.com/vector-premium/delicioso-patron-hamburguesa-telon-fondo-ilustracion-comida-sabrosa_332190-1724.jpg?semt=ais_items_boosted&w=740');"
+      style="background-image: url('https://img.freepik.com/vector-premium/delicioso-patron-hamburguesa-telon-fondo-ilustracion-comida-sabrosa_332190-1724.jpg');"
     >
     </div>
 
-    <div
-      class="relative z-10 container mx-auto"
-      data-sal="zoom-out"
-      data-sal-duration="1000"
-      data-sal-delay="300"
-      data-sal-easing="ease-out-bounce"
-    >
-      <!-- Encabezado mejorado -->
-      <div
-        class="flex flex-col items-center text-center mb-8 md:mb-12"
-        data-sal="zoom-in"
-        data-sal-delay="500"
-      >
+    <div class="relative z-10 container mx-auto">
+      <!-- encabezado -->
+      <div class="flex flex-col items-center text-center mb-8 md:mb-12">
         <img
           class="size-40 md:size-60 mb-4 rounded-full border-4 border-red-500 shadow-lg"
           src="https://cdn.fastpixel.io/fp/ret_img+v_6da+w_800+h_848+q_glossy+to_webp/www.sosfactory.com/wp-content/uploads/2016/12/restaurant-logo-mr-bolat.png"
@@ -45,60 +38,32 @@ import menu from "../data/menu.json";
         </p>
       </div>
 
-      <!-- Botones de categoría con Alpine -->
-      <div
-        class="flex gap-2 md:gap-4 mb-8 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-gray-800 px-2 md:justify-center"
-        data-sal="zoom-out"
-      >
+      <!-- botones de categorías (manuales por ahora) -->
+      <div class="flex gap-2 mb-8 overflow-x-auto pb-2 px-2 md:justify-center">
         <button
           @click="category = 'all'"
-          :class="{
-            'bg-red-600 shadow-lg': category === 'all',
-            'bg-gray-700 hover:bg-gray-600': category !== 'all'
-          }"
-          class="text-white px-4 py-2 rounded-full whitespace-nowrap transition-all duration-200 flex items-center gap-2"
+          :class="{ 'bg-red-600 shadow-lg': category === 'all', 'bg-gray-700': category !== 'all' }"
+          class="text-white px-4 py-2 rounded-full">🌟 Todos</button
         >
-          🌟 Todos
-        </button>
         <button
           @click="category = 'cocktails'"
-          :class="{
-            'bg-red-600 shadow-lg': category === 'cocktails',
-            'bg-gray-700 hover:bg-gray-600': category !== 'cocktails'
-          }"
-          class="text-white px-4 py-2 rounded-full whitespace-nowrap transition-all duration-200 flex items-center gap-2"
+          :class="{ 'bg-red-600 shadow-lg': category === 'cocktails', 'bg-gray-700': category !== 'cocktails' }"
+          class="text-white px-4 py-2 rounded-full">🍸 Cocteles</button
         >
-          🍸 Cocteles
-        </button>
         <button
           @click="category = 'hamburguesas'"
-          :class="{
-            'bg-red-600 shadow-lg': category === 'hamburguesas',
-            'bg-gray-700 hover:bg-gray-600': category !== 'hamburguesas'
-          }"
-          class="text-white px-4 py-2 rounded-full whitespace-nowrap transition-all duration-200 flex items-center gap-2"
+          :class="{ 'bg-red-600 shadow-lg': category === 'hamburguesas', 'bg-gray-700': category !== 'hamburguesas' }"
+          class="text-white px-4 py-2 rounded-full">🍔 Hamburguesas</button
         >
-          🍔 Hamburguesas
-        </button>
-        <button
-          @click="category = 'baguetts'"
-          :class="{
-            'bg-red-600 shadow-lg': category === 'baguetts',
-            'bg-gray-700 hover:bg-gray-600': category !== 'baguetts'
-          }"
-          class="text-white px-4 py-2 rounded-full whitespace-nowrap transition-all duration-200 flex items-center gap-2"
-        >
-          🥖 Baguettes
-        </button>
       </div>
 
-      <!-- Lista de productos con filtro Alpine -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-sal="zoom-out">
+      <!-- lista de productos -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {
           menu.map((item) => (
             <div
               x-show={`category === '${item.categoria}' || category === 'all'`}
-              class="bg-neutral-800/80 backdrop-blur-sm rounded-xl p-5 border border-gray-900 hover:border-red-500 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20"
+              class="bg-neutral-800/80 backdrop-blur-sm rounded-xl p-5 border border-gray-900 hover:border-red-500 transition"
             >
               <div class="flex justify-between items-start gap-4">
                 <div class="flex-1">
@@ -123,23 +88,21 @@ import menu from "../data/menu.json";
               <div class="mt-3 text-sm text-gray-300">
                 <p class="mb-2">
                   <strong class="text-yellow-400">Ingredientes:</strong>{" "}
-                  {item.ingredientes}
+                  {item.categoria}
                 </p>
                 {item.guarnicion && (
                   <p class="mb-3">
                     <strong class="text-yellow-400">Guarnición:</strong>{" "}
-                    {item.guarnicion}
+                    {item.descripcion}
                   </p>
                 )}
               </div>
 
               <div class="mt-4 space-y-2">
-                {item.presentaciones.map((p) => (
-                  <div class="flex justify-between items-center py-2 px-3 bg-gray-700/50 rounded-lg">
-                    <span class="font-medium">{p.tipo}</span>
-                    <span class="font-bold text-red-200">{p.precio}</span>
-                  </div>
-                ))}
+                <div class="flex justify-between items-center py-2 px-3 bg-gray-700/50 rounded-lg">
+                  <span class="font-medium">Tipo</span>
+                  <span class="font-bold text-red-200">{item.tipo}</span>
+                </div>
               </div>
             </div>
           ))
